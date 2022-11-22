@@ -8,13 +8,10 @@ import os
 def test_poc():
     caps = {
       "build": os.getenv("LT_BUILD_NAME"),
+      "name": "Test",
+      "platform": "Windows 10",
       "browserName": "Chrome",
-      "browserVersion": "108.0",
-      "LT:Options": {
-        "platformName": "Windows 10",
-        "project": "Untitled",
-        "plugin": "python-pytest"
-      }
+      "version": "108.0"
     }
 
     executor = os.getenv("LT_HUB_URL")
@@ -25,9 +22,6 @@ def test_poc():
         .find_element(By.CSS_SELECTOR, "#hotels-switcher-box > div.fBut > button")\
         .click()
     title = "Wyniki Wyszukiwania | ITAKA"
-    
-    print("-- LT_HUB_URL", os.getenv("LT_HUB_URL"))
-    print("-- LT_BUILD_NAME", os.getenv("LT_BUILD_NAME"))
     
     assert title == chrome_driver.title
     chrome_driver.close()
