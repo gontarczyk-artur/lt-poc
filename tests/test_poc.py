@@ -6,12 +6,25 @@ import os
 
 
 def test_poc():
-    caps = {
+    caps_0 = {
       "build": os.getenv("LT_BUILD_NAME"),
       "name": "Test",
       "platform": "Windows 10",
       "browserName": "Chrome",
       "version": "108.0"
+    }
+    
+    caps = {
+      "single_test": {
+	    "browserName": "Chrome",
+	    "browserVersion": "108.0",
+	    "LT:Options": {
+          "platformName": "Windows 10",
+          "project": "Untitled",
+          "w3c": True,
+          "plugin": "python-pytest"
+        }
+      }
     }
 
     executor = os.getenv("LT_HUB_URL")
