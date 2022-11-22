@@ -25,5 +25,9 @@ def test_poc():
         .find_element(By.CSS_SELECTOR, "#hotels-switcher-box > div.fBut > button")\
         .click()
     title = "Wyniki Wyszukiwania | ITAKA"
+    
+    print("-- LT_HUB_URL", os.getenv("LT_HUB_URL"))
+    print("-- LT_BUILD_NAME", os.getenv("LT_BUILD_NAME"))
+    
     assert title == chrome_driver.title
     chrome_driver.close()
