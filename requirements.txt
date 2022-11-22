@@ -1,0 +1,7 @@
+pytest == 7.1.2
+selenium == 4.4.3
+seleniumbase == 4.2.0
+pylint == 2.15.0
+dynaconf == 3.1.9
+TestLink-API-Python-client == 0.8.1
+requests==2.28.1
