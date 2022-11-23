@@ -14,21 +14,32 @@ def test_poc():
       "version": "108.0"
     }
     
-    caps = {
+    caps_1 = {
       "single_test": {
-	    "browserName": "Chrome",
-	    "browserVersion": "108.0",
-	    "LT:Options": {
+        "browserName": "Chrome",
+        "browserVersion": "108.0",
+        "LT:Options": {
           "platformName": "Windows 10",
           "project": "Untitled",
-          "w3c": True,
           "plugin": "python-pytest"
         }
       }
     }
 
-    executor = os.getenv("LT_HUB_URL")
-    chrome_driver = webdriver.Remote(command_executor=executor, desired_capabilities=caps)
+    caps_2 = {
+        "platform" : "Windows 10",
+        "browserName" : "Chrome",
+        "version" : "95.0",
+        "resolution": "1920x1080",
+        "name": "LambdaTest python test",
+        "build": "LambdaTest python test",
+        "video": True,
+        "console": True
+    }
+
+    executor_0 = os.getenv("LT_HUB_URL")
+    executor = os.getenv("LT_GRID_URL")
+    chrome_driver = webdriver.Remote(command_executor=executor, desired_capabilities=caps_1)
     chrome_driver.get('https://itaka.pl/')
     chrome_driver.maximize_window()
     chrome_driver\
