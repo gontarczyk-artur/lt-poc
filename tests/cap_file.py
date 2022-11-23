@@ -7,6 +7,7 @@ capabilities = {
     "LT:Options": {
       "platformName": "Windows 10",
       "project": "Untitled",
+      "selenium_version": "4.0.0",
       "w3c": True,
       "plugin": "python-pytest"
     }
