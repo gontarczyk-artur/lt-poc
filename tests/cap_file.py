@@ -1,6 +1,6 @@
 import os
 
-browser_name: str = os.getenv("LT_BROWSER_NAME")
+browser_name: str = os.environ["LT_BROWSER_NAME"]
 
 capabilities = {
 	"browserName": f"{browser_name}",
