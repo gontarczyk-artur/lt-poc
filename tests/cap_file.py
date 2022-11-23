@@ -1,8 +1,8 @@
 import os
 
 capabilities = {
-  "build" : os.getenv("LT_BUILD_NAME"),
-  "name" : os.getenv("LT_BUILD_NAME"),
+  "build" : "test-build",
+  "name" : "test-build",
   "platform" : "Windows 11",
   "browserName" : "Chrome",
   "version" : "101.0"
