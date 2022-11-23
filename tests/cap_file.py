@@ -1,9 +1,14 @@
 import os
 
 capabilities = {
-  "build" : "test-build",
-  "name" : "test-build",
-  "platform" : "Windows 11",
-  "browserName" : "Chrome",
-  "version" : "101.0"
+  "single_test": {
+    "browserName": "Firefox",
+    "browserVersion": "106.0",
+    "LT:Options": {
+      "platformName": "Windows 10",
+      "project": "Untitled",
+      "w3c": True,
+      "plugin": "python-pytest"
+    }
+  }
 }
