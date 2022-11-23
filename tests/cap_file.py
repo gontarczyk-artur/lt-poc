@@ -1,5 +1,7 @@
+import os
+
 capabilities = {
-	"browserName": "Firefox",
+	"browserName": os.getenv("$LT_BROWSER_NAME"),
 	"browserVersion": "102.0",
 	"LT:Options": {
 		"platformName": "Windows 10",
