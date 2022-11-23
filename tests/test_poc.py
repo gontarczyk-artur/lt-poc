@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 import os
 
 
-def test_poc():
+def test_poc(sb):
     caps_0 = {
       "build": os.getenv("LT_BUILD_NAME"),
       "name": "Test",
@@ -37,15 +37,13 @@ def test_poc():
         "console": True
     }
 
-    executor_0 = os.getenv("LT_HUB_URL")
-    executor = os.getenv("LT_GRID_URL")
-    chrome_driver = webdriver.Remote(command_executor=executor, desired_capabilities=caps_1)
-    chrome_driver.get('https://itaka.pl/')
-    chrome_driver.maximize_window()
-    chrome_driver\
-        .find_element(By.CSS_SELECTOR, "#hotels-switcher-box > div.fBut > button")\
-        .click()
-    title = "Wyniki Wyszukiwania | ITAKA"
-    
-    assert title == chrome_driver.title
-    chrome_driver.close()
+    # executor_0 = os.getenv("LT_HUB_URL")
+    # executor = os.getenv("LT_GRID_URL")
+    # chrome_driver = webdriver.Remote(command_executor=executor, desired_capabilities=caps_1)
+    # chrome_driver.get('https://itaka.pl/')
+    # chrome_driver.maximize_window()
+    # chrome_driver.find_element(By.CSS_SELECTOR, "#hotels-switcher-box > div.fBut > button").click()
+    # title = "Wyniki Wyszukiwania | ITAKA"
+    # assert title == chrome_driver.title
+    # chrome_driver.close()
+    sb.open("https://itaka.pl/")
