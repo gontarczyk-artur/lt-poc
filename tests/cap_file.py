@@ -1,12 +1,12 @@
+import os
+
 capabilities = {
-  "single_test": {
-	"browserName": "Chrome",
-	"browserVersion": "108.0",
+	"browserName": os.getenv("LT_BROWSER_NAME"),
+	"browserVersion": os.getenv("LT_BROWSER_VERSION"),
 	"LT:Options": {
-		"platformName": "Windows 10",
+		"platformName": os.getenv("LT_PLATFORM"),
 		"project": "Untitled",
-		"selenium_version": "4.0.0",
 		"w3c": True
 	}
-  }
+
 }
