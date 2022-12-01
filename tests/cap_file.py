@@ -1,5 +1,5 @@
 capabilities = {
-	"browserName": "%LT_BROWSER_NAME%",
+	"browserName": "Firefox",
 	"browserVersion": "102.0",
 	"LT:Options": {
 		"platformName": "Windows 10",
